@@ -3,17 +3,20 @@
   --light-pink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+  --purple: hsl(290, 53%, 46%);
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: linear-gradient(to bottom, transparent 50%, var(--light-pink) 50%),
     url("/assets/images/background-pattern-desktop.svg") center top / 100%
       no-repeat;
+  background-size: cover;
   background-color: var(--light-pink);
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
@@ -22,11 +25,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--dark-purple);
 }
 
 h1 {
   font-weight: 700;
   font-size: 4em;
+  font-size: 3em;
 }
 
 h2 {
@@ -36,6 +41,10 @@ h2 {
 }
 
 h2:hover {
+  color: var(--purple);
+}
+
+p {
   color: var(--grayish-purple);
 }
 
@@ -64,8 +73,9 @@ button {
   background-color: var(--white);
   border-radius: 20px;
   max-width: 600px;
-  max-height: auto;
-  padding: 1em;
+  width: 100%;
+  height: auto;
+  padding: 0.5em;
   margin: 2em;
   box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.2);
 }
@@ -106,6 +116,12 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1em;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 350px;
+  }
 }
 
 .attribution {
