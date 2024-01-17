@@ -18,6 +18,10 @@ body {
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -26,8 +30,13 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
+  margin-right: 2em;
+}
+
+h2:hover {
+  color: var(--grayish-purple);
 }
 
 main {
@@ -37,10 +46,12 @@ main {
   align-items: center;
 }
 
-.card {
-  background-color: var(--white);
-  border-radius: 20px;
-  max-width: 700px;
+button {
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .header {
@@ -49,19 +60,59 @@ main {
   align-items: center;
 }
 
+.card {
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 600px;
+  max-height: auto;
+  padding: 1em;
+  margin: 2em;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icons {
+  position: relative;
+}
+
+.button-plus,
+.button-minus {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+}
+
+.button-plus {
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
 .star {
   margin: 2em;
 }
 
+.subject {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
 .title-subject {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 1em;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
